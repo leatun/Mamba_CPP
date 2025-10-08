@@ -29,6 +29,8 @@ Dependencies:
 ```
 
 ---
+notice: all the shell commands arent correctly configured, and are only here for instruction purposes.
+we hope u dont have a hard time figuring out all this.
 
 ## Workflow Overview
 
