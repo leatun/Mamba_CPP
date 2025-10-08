@@ -59,10 +59,10 @@ Dependencies:
 
    Creates a Python-importable `.so` module for C++ inference.
 
-4. **Hybrid model integration**
+4. **Hybrid model integration**  
    Replace one of the Mamba blocks in the `130M` pretrained model with the C++ version using `create_hybrid_model.py`.
 
-5. **Evaluation**
+5. **Evaluation**  
    Run the **LM Hardness Evaluation** library for full-model benchmarking with mixed C++ and Python layers.
 
 ---
