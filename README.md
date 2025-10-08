@@ -1,4 +1,4 @@
-A C++ implementation of the Mamba Selective State Space Model (SSM) architecture, inspired by the original 130m param pretrained model uploaded on Hugging Face.
+A C++ implementation of the Mamba Selective State Space Model (SSM) architecture, inspired by the original 130m param pretrained model uploaded on Hugging Face.  
 It includes simple scripts to extract weights from pretrained checkpoints, verify block outputs against the original model, and run end-to-end evaluation with the LM Hardness benchmark.
 
 Dependencies:  
