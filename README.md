@@ -97,4 +97,5 @@ we hope u dont have a hard time figuring out all this.
 
 ## 📜 License
 
-MIT License.
+None.
+CEUIT
