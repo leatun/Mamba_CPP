@@ -66,14 +66,17 @@ we hope u dont have a hard time figuring out all this.
 
 5. **Evaluation**  
    Run the **LM Hardness Evaluation** library for full-model benchmarking with mixed C++ and Python layers using these commands:  
-   Hybrid model:
+     
+   - Hybrid model:
    ```bash
    lm_eval --model hf --model_args pretrained=./mamba-130m-hybrid,trust_remote_code=True --tasks lambada_openai,hellaswag,arc_easy,winogrande --device cuda:0 --batch_size auto --output_path ./eval_results/hybrid_130m
    ```
-   Original model:
+   - Original model:
    ```bash
    lm_eval --model hf --model_args pretrained=state-spaces/mamba-130m-hf,trust_remote_code=True --tasks lambada_openai,hellaswag,arc_easy,winogrande --device cuda:0 --batch_size auto --output_path ./eval_results/mamba-130m-h
-
+   ```
+   This will result in two .json files with the scores for every chosen task from the **LM Hardness Evaluation** library. You can conpare it yourself to see the differences. Our checkpoints can be seen in the **eval_results** folder.
+   
 ---
 
 ## ⚙️ Build Notes
