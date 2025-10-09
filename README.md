@@ -62,10 +62,17 @@ we hope u dont have a hard time figuring out all this.
    Creates a Python-importable `.so` module for C++ inference.
 
 4. **Hybrid model integration**  
-   Replace one of the Mamba blocks in the `130M` pretrained model with the C++ version using `create_hybrid_model.py`.
+   Replace one of the Mamba blocks in the `130M` pretrained model with the C++ version and create the hybrid model using `create_hybrid_model.py`.
 
 5. **Evaluation**  
-   Run the **LM Hardness Evaluation** library for full-model benchmarking with mixed C++ and Python layers.
+   Run the **LM Hardness Evaluation** library for full-model benchmarking with mixed C++ and Python layers using these commands:
+   Hybrid model:
+   ```bash
+   lm_eval --model hf --model_args pretrained=./mamba-130m-hybrid,trust_remote_code=True --tasks lambada_openai,hellaswag,arc_easy,winogrande --device cuda:0 --batch_size auto --output_path ./eval_results/hybrid_130m
+   ```
+   Original model:
+   ```bash
+   lm_eval --model hf --model_args pretrained=state-spaces/mamba-130m-hf,trust_remote_code=True --tasks lambada_openai,hellaswag,arc_easy,winogrande --device cuda:0 --batch_size auto --output_path ./eval_results/mamba-130m-h
 
 ---
 
